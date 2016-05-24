@@ -12,8 +12,10 @@
         <td class="aligntop" style="padding:15px 10px 5px 10px;">
           <?php if ($reportmode == 'approvals') { ?>
             <div style="padding-bottom:10px;"><img src="<?php print $fileicon; ?>">&nbsp;<strong><?php print $filetitle ?></strong>&nbsp;<span style="font-size:8pt;"><?php print $current_version ?></span></div>
-          <?php } else { ?>
-            <div style="padding-bottom:10px;"><img src="<?php print $fileicon; ?>">&nbsp;<a href="<?php print url('filedepot', array('query' => array('cid' => $cid, 'fid' => $fid), 'absolute' => true)); ?>" title="<?php print t('Direct link to file'); ?>" <?php print $disable_download ?>><strong><?php print $filetitle ?></strong></a>&nbsp;<span style="font-size:8pt;"><?php print $current_version ?></span></div>
+          <?php } else {
+	          // MODIFIED4IISG (disabled a href)
+	         ?>
+            <div style="padding-bottom:10px;"><img src="<?php print $fileicon; ?>">&nbsp;<xxxa href="<?php print url('filedepot', array('query' => array('cid' => $cid, 'fid' => $fid), 'absolute' => true)); ?>" title="<?php print t('Direct link to file'); ?>" <?php print $disable_download ?>><strong><?php print $filetitle ?></strong></xxxa>&nbsp;<span style="font-size:8pt;"><?php print $current_version ?></span></div>
           <?php } ?>
             <div class="floatleft" style="width:100px;"><strong><?php print t('File Name'); ?>:</strong></div>
             <div class="floatleft"><?php print $real_filename ?></div>

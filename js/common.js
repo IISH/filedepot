@@ -1416,7 +1416,8 @@ function makeAJAXGetFolderListing(cid) {
         //YAHOO.log('getFolderlisiting: initiate rendering leftside navigation:' + timeDiff.getDiff() + 'ms');
         YAHOO.filedepot.showLeftNavigation();
         //YAHOO.log('getFolderlisiting Updated page completed in: ' + timeDiff.getDiff() + 'ms');
-        updateAjaxStatus(NEXLANG_refreshmsg + timeDiff.getDiff() + 'ms');
+        // DISABLED4IISG
+        //updateAjaxStatus(NEXLANG_refreshmsg + timeDiff.getDiff() + 'ms');
         timer = setTimeout("Dom.setStyle('filedepot_ajaxStatus','visibility','hidden')", 3000);
         if (blockui)  {
           setTimeout('jQuery.unblockUI()',200);
@@ -1509,7 +1510,8 @@ function makeAJAXSearchTags(searchtags,removetag) {
             Dom.get('tagcloud_words').innerHTML = oResults.tagcloud;
           }
         }
-        updateAjaxStatus(NEXLANG_refreshmsg + timeDiff.getDiff() + 'ms');
+        // DISABLED4IISG
+        //updateAjaxStatus(NEXLANG_refreshmsg + timeDiff.getDiff() + 'ms');
 
       } else {
         alert(NEXLANG_errormsg5);
@@ -1643,7 +1645,8 @@ function makeAJAXSearch(form) {
           Dom.get('activefolder_container').innerHTML = oResults.activefolder;
           Dom.get('filelistingheader').innerHTML = oResults.header;
           renderFileListing(oResults);
-          updateAjaxStatus(NEXLANG_refreshmsg + timeDiff.getDiff() + 'ms');
+          // DISABLED4IISG
+          //updateAjaxStatus(NEXLANG_refreshmsg + timeDiff.getDiff() + 'ms');
 
         } else {
           alert(NEXLANG_errormsg5);
@@ -2298,31 +2301,33 @@ function renderLeftNavigation(oResults) {
   var tree = new YAHOO.widget.TreeView("filedepotNavTreeDiv");
   var root = tree.getRoot();
 
-  // Reports
-  var reports = new YAHOO.widget.TextNode(NEXLANG_intelfolder1, root, true);
-  reports.labelStyle = "icon-files";
-  for (var i = 0; i < oResults.reports.length; i++) {
-    new YAHOO.widget.TextNode({
-      label: oResults.reports[i]['label'],
-      labelStyle: oResults.reports[i]['icon'],
-      report: oResults.reports[i]['report'],
-      cid: 0
-    }, reports, false);
-  }
+// // DISABLED4IISG (not used)
+//  // Reports
+//  var reports = new YAHOO.widget.TextNode(NEXLANG_intelfolder1, root, true);
+//  reports.labelStyle = "icon-files";
+//  for (var i = 0; i < oResults.reports.length; i++) {
+//    new YAHOO.widget.TextNode({
+//      label: oResults.reports[i]['label'],
+//      labelStyle: oResults.reports[i]['icon'],
+//      report: oResults.reports[i]['report'],
+//      cid: 0
+//    }, reports, false);
+//  }
 
-  // Recent Folders
-  if (oResults.recentfolders != null) {
-    var recentfolders = new YAHOO.widget.TextNode(NEXLANG_intelfolder2, root, true);
-    recentfolders.labelStyle = "icon-allfolders";
-    for (var i = 0; i < oResults.recentfolders.length; i++) {
-      new YAHOO.widget.TextNode({
-        label: oResults.recentfolders[i]['label'],
-        labelStyle: oResults.recentfolders[i]['icon'],
-        report: '',
-        cid: oResults.recentfolders[i]['cid']
-      }, recentfolders, false);
-    }
-  }
+// // DISABLED4IISG (not used)
+//  // Recent Folders
+//  if (oResults.recentfolders != null) {
+//    var recentfolders = new YAHOO.widget.TextNode(NEXLANG_intelfolder2, root, true);
+//    recentfolders.labelStyle = "icon-allfolders";
+//    for (var i = 0; i < oResults.recentfolders.length; i++) {
+//      new YAHOO.widget.TextNode({
+//        label: oResults.recentfolders[i]['label'],
+//        labelStyle: oResults.recentfolders[i]['icon'],
+//        report: '',
+//        cid: oResults.recentfolders[i]['cid']
+//      }, recentfolders, false);
+//    }
+//  }
 
   // Top Folders
   var topfolders = new YAHOO.widget.TextNode(NEXLANG_intelfolder3, root, true);
@@ -2617,7 +2622,8 @@ YAHOO.filedepot.showfiles = function(cid) {
         }
 
         //YAHOO.log('showfiles: initiate rendering leftside navigation:' + timeDiff.getDiff() + 'ms');
-        updateAjaxStatus(NEXLANG_refreshmsg + timeDiff.getDiff() + 'ms');
+        // DISABLED4IISG
+        //updateAjaxStatus(NEXLANG_refreshmsg + timeDiff.getDiff() + 'ms');
         //YAHOO.log('showfiles: completed function:' + timeDiff.getDiff() + 'ms');
 
       } else if (oResults.retcode == 401) {   // No permissions to view this category

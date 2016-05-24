@@ -162,9 +162,20 @@ function filedepot_permission() {
 function filedepot_menu() {
   $items = array();
 
+  // ADDED4IISG
+  $items['intranet-archive'] = array(
+  	'title' => 'Intranet Archive',
+  	'page callback' => 'filedepot_main',
+  	'page arguments' => array(1), // optional group context
+  	'access callback' => 'user_access',
+  	'access arguments' => array('access filedepot'),
+  	'type' => MENU_NORMAL_ITEM,
+  );
 
   $items['filedepot'] = array(
-    'title' => 'Filedepot',
+    // MODIFIED4IISG
+    //'title' => 'Filedepot',
+    'title' => 'Intranet Archive',
     'page callback' => 'filedepot_main',
     'page arguments' => array(1), // optional group context
     'access callback' => 'user_access',
@@ -226,8 +237,20 @@ function filedepot_menu() {
     'type' => MENU_NORMAL_ITEM,
   );
 
+  // ADDED4IISG
+  $items['intranet-archive/folder/%'] = array(
+  	'title' => 'Intranet Archive',
+  	'page callback' => 'filedepot_main',
+  	'page arguments' => array(1, 2),
+  	'access callback' => 'user_access',
+  	'access arguments' => array('access filedepot'),
+  	'type' => MENU_NORMAL_ITEM,
+  );
+
   $items['filedepot/folder/%'] = array(
-    'title' => 'Filedepot',
+    // MODIFIED4IISG
+    //'title' => 'Filedepot',
+    'title' => 'Intranet Archive',
     'page callback' => 'filedepot_main',
     'page arguments' => array(1, 2),
     'access callback' => 'user_access',
