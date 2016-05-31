@@ -113,7 +113,7 @@
 
       <div id="filedepottoolbar" class="filedepottoolbar" style="margin-right:0px;padding:5px;display:none;margin-bottom:1px;">
 
-      <div style="float:left;width:250px;height:20px;padding-left:20px;">XXX
+      <div style="float:left;width:250px;height:20px;padding-left:20px;">
       <?php
       // DISABLED4IISG
       $show_newfolder = 'false';
@@ -149,7 +149,7 @@
           </form>
         </div>
         <div class="tagsearchboxcontainer" style="width:10%;padding:5px;">
-          <div><XXXa id="showsearchtags" href="#"><? // DISABLED4IISG php echo t('Tags'); ?></XXXa></div>
+          <div><xxxa id="showsearchtags" href="#"><? // DISABLED4IISG php echo t('Tags'); ?></xxxa></div>
         </div>
       </div>
     </div>
