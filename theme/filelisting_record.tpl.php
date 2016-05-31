@@ -16,7 +16,8 @@
                     <a href="?id=<?php print $fid ?>" onclick="return false;"><img id="favitem<?php print $fid ?>" class="togglefavorite" src="<?php print $favorite_status_image ?>" TITLE="<?php print $LANG_favorite_status ?>"></a>
                 <?php } ?>
                 <span style="padding-left:<?php print $padding_left ?>px;">
-                    <a class="filedetailsdialog" href="<?php print $details_link_parms ?>"><img src="<?php print $extension_icon ?>"></a>
+	                <!-- DISABLED4IISG disabled link // -->
+                    <xxxa class="filedetailsdialog" href="<?php print $details_link_parms ?>"></xxxa><img src="<?php print $extension_icon ?>">
                 </span>
                 <span style="padding-left:5px;padding-right:5px;color:#666;"><?php print $file_number ?></span>
                 <span class="filedetailslink">
