@@ -5,7 +5,7 @@
   */
 ?>
 
-<div id="activefolder"><a href="#" onclick="edit_activefolder();" TITLE="<?php print $LANG_click_adminmsg ?>"><?php print $active_folder_name ?></a></div>
+<div id="activefolder"><xxxa href="#" onclick="edit_activefolder();" TITLE="<?php print $LANG_click_adminmsg ?>"></xxxa><!-- CHANGED4IISG moved foldername outside A tag // --><?php print $active_folder_name ?></div>
 
 <div id="edit_activefolder">
   <form name="frm_activefolder" method="post" action="<?php print $ajax_server_url ?>">

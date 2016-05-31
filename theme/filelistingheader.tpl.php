@@ -8,7 +8,10 @@
 
 <div class="filedepotheading" style="display: <?php print $show_mainheader ?>">
   <input type="hidden" name="ltoken" id="flistingltoken" value="<?php print $token ?>" />
-  <div class="floatleft"><input id="headerchkall" type="checkbox" value="all" onclick="toggleCheckedItems(this);"></div>
+  <div class="floatleft">
+    <!-- CHANGED4IISG checkbox (original) into hidden -->
+    <input id="headerchkall" type="hidden" value="all" onclick="toggleCheckedItems(this);">
+  </div>
   <div class="floatleft" style="padding-left:35px;padding-right:10px;">
     <div class="floatleft"><?php print $LANG_filename ?>
       <span id="showhidedetail" style="padding-left:20px;">
@@ -32,7 +35,10 @@
   </div>
 </div>
 <div class="filedepotheading" style="display: <?php print $show_incomingheader ?>">
-  <div class="floatleft"><input id="headerchkall" type="checkbox" value="all" onclick="toggleCheckedItems(this);"></div>
+  <div class="floatleft">
+    <!-- CHANGED4IISG checkbox (original) into hidden -->
+    <input id="headerchkall" type="hidden" value="all" onclick="toggleCheckedItems(this);">
+  </div>
   <div class="floatleft" style="padding-left:35px;padding-right:10px;">
     <div class="floatleft"><?php print $LANG_filename ?></div>
   </div>
