@@ -288,8 +288,9 @@ function togglefolder(id) {
     // Check if all records are now closed
     recordList = Dom.getElementsByClassName('icon-folderopen');
     if (recordList.length == 0) {
-      Dom.get('expandcollapsefolderslink').href='?op=expand';
-      Dom.get('expandcollapsefolderslink').innerHTML = NEXLANG_click2expandfolders;
+// DISABLED4IISG
+//      Dom.get('expandcollapsefolderslink').href='?op=expand';
+//      Dom.get('expandcollapsefolderslink').innerHTML = NEXLANG_click2expandfolders;
     }
   }
 
@@ -336,7 +337,8 @@ function expandCollapseFolders(obj,mode) {
       expandedfolders = arrayRemoveItem(expandedfolders,id); // Remove this folder from the array we use to track expanded folders
     }
     obj.href='?op=expand';
-    obj.innerHTML = NEXLANG_click2expandfolders;
+// DISABLED4IISG
+//    obj.innerHTML = NEXLANG_click2expandfolders;
   }
   YAHOO.filedepot.alternateRows.init('listing_record');
 
@@ -368,16 +370,17 @@ function showhideFileDetail(mode) {
   }
 
   if (elements.length > 0) {
+    // MODIFIED4IISG
     if (mode == 'show') {
-      YAHOO.util.Cookie.set("filedepotdetail", "expanded");
-      filedepotdetail = 'expanded';
-      var elm = Dom.getFirstChild('showhidedetail');
-      elm.innerHTML = NEXLANG_click2hidedetail;
+//      YAHOO.util.Cookie.set("filedepotdetail", "expanded");
+//      filedepotdetail = 'expanded';
+//      var elm = Dom.getFirstChild('showhidedetail');
+//      elm.innerHTML = NEXLANG_click2hidedetail;
     } else {
-      YAHOO.util.Cookie.set("filedepotdetail", "collapsed");
-      filedepotdetail = 'collapsed';
-      var elm = Dom.getFirstChild('showhidedetail');
-      elm.innerHTML = NEXLANG_click2showdetail;
+//      YAHOO.util.Cookie.set("filedepotdetail", "collapsed");
+//      filedepotdetail = 'collapsed';
+//      var elm = Dom.getFirstChild('showhidedetail');
+//      elm.innerHTML = NEXLANG_click2showdetail;
     }
   }
 

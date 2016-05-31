@@ -112,8 +112,14 @@
   <div id="filedepot">
 
       <div id="filedepottoolbar" class="filedepottoolbar" style="margin-right:0px;padding:5px;display:none;margin-bottom:1px;">
-      <div style="float:left;width:250px;height:20px;padding-left:20px;">
-      <?php if ($show_newfolder == 'true') { ?>
+
+      <div style="float:left;width:250px;height:20px;padding-left:20px;">XXX
+      <?php
+      // DISABLED4IISG
+      $show_newfolder = 'false';
+      $show_upload = 'false';
+
+      if ($show_newfolder == 'true') { ?>
         <span id="newfolderlink">
           <span class="first-child">
             <a class="ctools-use-modal ctools-modal-filedepot-newfolder-dialog-style" href="<?php print url('filedepot/nojs/newfolder'); ?>"><?php echo t('New Folder'); ?></a>
@@ -128,6 +134,7 @@
         </span>
       <?php } ?>
       </div>
+
       <?php print $toolbarform ?>
       <div class="filedepottoolbar_searchbox">
         <div class="filedepottoolbar_searchform">
@@ -142,7 +149,7 @@
           </form>
         </div>
         <div class="tagsearchboxcontainer" style="width:10%;padding:5px;">
-          <div><a id="showsearchtags" href="#"><?php echo t('Tags'); ?></a></div>
+          <div><XXXa id="showsearchtags" href="#"><? // DISABLED4IISG php echo t('Tags'); ?></XXXa></div>
         </div>
       </div>
     </div>

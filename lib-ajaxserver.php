@@ -976,6 +976,9 @@ function filedepotAjaxServer_loadFileDetails() {
 
 
 function filedepotAjaxServer_getMoreActions($op) {
+  // DISABLED4IISG
+  return ' '; // space
+
   $retval = '<option value="0">' . t('More Actions') . '...</option>';
   switch ($op) {
     case 'approvals':
